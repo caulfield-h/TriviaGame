@@ -19,7 +19,7 @@ $(document).ready(function() {
     // initialize game with html and keep hidden at start
 
     $('#center-container').hide();
-    $('#bottom-container').hide();
+    $('#final-container').hide();
 
     $('#startGame').on("click", function() {
         // hide the initial screen from player
@@ -36,7 +36,7 @@ $(document).ready(function() {
         // reduce the counter by 1
         count--;
         // display the current time to player in the html
-        $('#clockCounter').html(count + ' Seconds');
+        $('#timer-seconds').html(count + ' Seconds');
 
         // timeOut functionality cases*
         // if finished before time is up
@@ -54,77 +54,88 @@ $(document).ready(function() {
     }
 
     function beginTimer() {
-        setInterval(countdown, 1000);
+        setInterval(timerCount, 1000);
     }
 
     // function to run at game over
     function gameOver() {
-        var questionOne = $('input:radio[name="questionOne"]:checked').val();
-        var questionTwo = $('input:radio[name="questionTwo"]:checked').val();
-        var questionThree = $('input:radio[name="questionThree"]:checked').val();
-        var questionFour = $('input:radio[name="questionFour"]:checked').val();
-        var questionFive = $('input:radio[name="questionFive"]:checked').val();
-        var questionSix = $('input:radio[name="questionSix"]:checked').val();
-        var questionSeven = $('input:radio[name="questionSeven"]:checked').val();
-        var questionEight = $('input:radio[name="questionEight"]:checked').val();
+        var questionOne = $('input:radio[name="questOne"]:checked').val();
+        var questionTwo = $('input:radio[name="questTwo"]:checked').val();
+        var questionThree = $('input:radio[name="questThree"]:checked').val();
+        var questionFour = $('input:radio[name="questFour"]:checked').val();
+        var questionFive = $('input:radio[name="questFive"]:checked').val();
+        var questionSix = $('input:radio[name="questSix"]:checked').val();
+        var questionSeven = $('input:radio[name="questSeven"]:checked').val();
+        var questionEight = $('input:radio[name="questEight"]:checked').val();
 
         // change counts based on user response
         if (questionOne == undefined) {
             questionsRemaining++;
-        } else if (questionOne == "") {
+        } else if (questionOne == "right") {
             answeredCorrect++;
         } else {
             answeredIncorrect++;
         }
         if (questionTwo == undefined) {
             questionsRemaining++;
-        } else if (questionTwo == "") {
+        } else if (questionTwo == "right") {
             answeredCorrect++;
         } else {
             answeredIncorrect++;
         }
         if (questionThree == undefined) {
             questionsRemaining++;
-        } else if (questionThree == "") {
+        } else if (questionThree == "right") {
             answeredCorrect++;
         } else {
             answeredIncorrect++;
         }
         if (questionFour == undefined) {
             questionsRemaining++;
-        } else if (questionFour == "") {
+        } else if (questionFour == "right") {
             answeredCorrect++;
         } else {
             answeredIncorrect++;
         }
         if (questionFive == undefined) {
             questionsRemaining++;
-        } else if (questionFive == "") {
+        } else if (questionFive == "right") {
             answeredCorrect++;
         } else {
             answeredIncorrect++;
         }
         if (questionSix == undefined) {
             questionsRemaining++;
-        } else if (questionSix == "") {
+        } else if (questionSix == "right") {
             answeredCorrect++;
         } else {
             answeredIncorrect++;
         }
         if (questionSeven == undefined) {
             questionsRemaining++;
-        } else if (questionSeven == "") {
+        } else if (questionSeven == "right") {
             answeredCorrect++;
         } else {
             answeredIncorrect++;
         }
         if (questionEight == undefined) {
             questionsRemaining++;
-        } else if (questionEight == "") {
+        } else if (questionEight == "right") {
             answeredCorrect++;
         } else {
             answeredIncorrect++;
         }
+
+        // display updated tallies
+
+        $('#correct-answers').html(answeredCorrect);
+        $('#wrong-answers').html(answeredIncorrect);
+        $('#left-blank').html(questionsRemaining);
+
+        // display end score area
+
+        $('#final-container').show();
     }
 
-})
+
+});

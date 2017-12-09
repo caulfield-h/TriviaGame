@@ -3,8 +3,9 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+
 <!--<![endif]-->
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -12,29 +13,87 @@
     <title>Trivia Game</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <!--Main Jumbotron Area-->
-    <div class="jumbotron">
-        <div class="container">
-            <div class="row">
-                <h1 class="main-heading">Trivia Game - Week 5</h1>
-                <div class="mainArea col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"></div>
-            </div>
-        </div>
+    <div id="start-screen">
+        <h1 class="graphic">Trivia Game Title</h1>
+        <button id="startGame">Start Game</button>
     </div>
-    <div class="cointainer">
 
+    <div id="center-container">
+        <h1 class="graphic">Linux Trivia Game</h1>
+        <h1 id="clockCounter">Seconds Remaining: <span id="timer-seconds">30 Seconds</span></h1>
+
+        <!-- questions -->
+        <h1>Question 1: <br> Who invented the Linux operating system?</h1>
+        <input type="radio" name="questOne" value="wrong">John Locke
+        <input type="radio" name="questOne" value="wrong">Elon Musk
+        <input type="radio" name="questOne" value="wrong">Jared Kushner
+        <input type="radio" name="questOne" value="right">Linus Torvalds
+
+        <h1>Question 2: <br> What is the most popular Linux distribution?</h1>
+        <input type="radio" name="questTwo" value="right">Linux Mint
+        <input type="radio" name="questTwo" value="wrong">Ubuntu
+        <input type="radio" name="questTwo" value="wrong">Debian
+        <input type="radio" name="questTwo" value="wrong">Arch Linux
+
+        <h1>Question 3: <br> How much does Linux cost to purchase?</h1>
+        <input type="radio" name="questThree" value="wrong">$50
+        <input type="radio" name="questThree" value="wrong">$100
+        <input type="radio" name="questThree" value="wrong">$200
+        <input type="radio" name="questThree" value="right">Most distributions are free.
+
+        <h1>Question 4: <br> Why type of operating system is Linux?</h1>
+        <input type="radio" name="questFour" value="wrong">MS-DOS
+        <input type="radio" name="questFour" value="wrong">Android
+        <input type="radio" name="questFour" value="wrong">iOS
+        <input type="radio" name="questFour" value="right">Unix-like
+
+        <h1>Question 5: <br> What is Linux primarily used for?</h1>
+        <input type="radio" name="questFive" value="wrong">Desktop
+        <input type="radio" name="questFive" value="wrong">Security
+        <input type="radio" name="questFive" value="wrong">Enterprise
+        <input type="radio" name="questFive" value="right">All of the above.
+
+        <h1>Question 6: <br> What distribution is most popular among security professionals?</h1>
+        <input type="radio" name="questSix" value="wrong">Arch Linux
+        <input type="radio" name="questSix" value="wrong">Red Hat
+        <input type="radio" name="questSix" value="wrong">Fedora
+        <input type="radio" name="questSix" value="right">Kali Linux
+
+        <h1>Question 7: <br> What year Linux invented?</h1>
+        <input type="radio" name="questSeven" value="wrong">1987
+        <input type="radio" name="questSeven" value="wrong">2014
+        <input type="radio" name="questSeven" value="wrong">1972
+        <input type="radio" name="questSeven" value="right">1991
+
+        <h1>Question 8: <br> What type of shell was Linux initially launched with?</h1>
+        <input type="radio" name="questEight" value="wrong">Zsh
+        <input type="radio" name="questEight" value="wrong">Powershell
+        <input type="radio" name="questEight" value="wrong">Zsh
+        <input type="radio" name="questEight" value="right">Bash
+        <br>
+        <button id="cancel-button">Submit Answers</button>
     </div>
-    <!-- container2 -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <!-- game Over -->
+    <div id="final-container">
+        <h1 class="graphic">Trivia Game Title</h1>
+        <h1 id="submit">Submit Trivia Answers</h1>
+        <br>
+        <h1>Score Tally</h1>
+        <h1>Correct Answers: <span id="correct-answers">0</span></h1>
+        <h1>Incorrect Answers: <span id="wrong-answers">0</span></h1>
+        <h1>Answers Left Blank: <span id="left-blank">0</span></h1>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+
+
 </body>
 
 </html>
