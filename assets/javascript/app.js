@@ -1,5 +1,5 @@
 // timer set to 30 seconds
-
+window.scrollTo(0, 500);
 var timeLimit = 30 * 1000;
 var count = 30;
 
@@ -135,6 +135,7 @@ $(document).ready(function() {
         // display end score area
 
         $('#final-container').show();
+        window.scrollTo(0, 550);
     }
 
 

@@ -1,50 +1,109 @@
-.jumbotron {
-    box-sizing: border-box;
-    height: 600px;
-    background-color: black;
-}
-
-.main-button-container {
-    margin-top: 175px;
-    max-width: 610px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.timer-p {
-    margin-top: 40px;
-}
-
-.answer:hover {
-    background: paleturquoise;
-}
-
-.answer {
-    padding-top: 7px;
-    height: 45px;
-    color: black;
-    padding-left: 14px;
-    background-color: white;
-    border-radius: 4px;
-}
-
-.img-wrong {
-    margin-top: 40px;
-}
-
-.first-answer {
-    margin-top: 40px;
-}
-
-.reset-button {
-    margin-top: 40px;
-}
-
-.summary-correct {
-    margin-top: 40px;
-}
-
 body {
-    background-color: #DD0506;
+    background-image: url("../images/radio.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: right;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.graphic {
+    font-size: 85px;
     color: white;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-family: 'Bungee Shade', cursive;
+}
+
+#start-screen {
+    height: auto;
+    padding-bottom: 50px;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: coral;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 15px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+
+#start_button {
+    margin-top: 8%;
+    height: 75px;
+    width: 250px;
+    font-size: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+}
+
+#center-container {
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    margin-top: 3%;
+    height: auto;
+    padding-bottom: 50px;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: slateblue;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 15px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+#timer-seconds {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+#cancel-button {
+    margin-top: 5%;
+    height: 75px;
+    width: 250px;
+    font-size: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#final-container {
+    height: auto;
+    padding-bottom: 50px;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-image: url("../images/versus.jpg");
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 15px;
+    color: coral;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 75% 75%;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#submit {
+    font-size: 35px;
+    font-family: 'Pacifico', cursive;
 }
